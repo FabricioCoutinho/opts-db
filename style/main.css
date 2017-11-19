@@ -1,0 +1,240 @@
+@import url("menu.css");
+body #card_container img {
+ max-height:60px;
+ width:auto;
+}
+.container-fluid {
+ width:100%;
+ padding-left:0%;
+ padding-right:0%;
+}
+.mobile {
+ display:none;
+}
+body #card_container td.character {
+ width:100%;
+}
+table.dataTable thead th,table.dataTable thead td {
+ color:#333;
+}
+#card_container th[class^='gp2'] {
+}
+.dataTables_wrapper .dataTables_filter {
+ float:left;
+ margin:10px 10px;
+}
+.card_table {
+ display:none;
+ border-top:1px #666 solid;
+ position:relative;
+}
+.card_table th,.card_table td {
+ white-space:nowrap;
+ word-break:keep-all;
+}
+.card_table tbody tr:not([data-scene='scene']) {
+ display:none;
+}
+.card_table_filter input[type='search'] {
+ border:1px #ccc solid;
+}
+.header {
+ width:99%;
+ height:50px;
+ margin:0 auto;
+ background-color:#333;
+ color:#fff;
+ font-weight:bold;
+ line-height:50px;
+ padding-left:20px;
+ border-bottom-left-radius:5px;
+ border-bottom-right-radius:5px;
+}
+.btn-group {
+ margin:10px 0px;
+}
+table.dataTable.stripe tbody tr.odd,table.dataTable.display tbody tr.odd {
+ background-color:#EEE4D3;
+}
+table.dataTable.hover tbody tr:hover,table.dataTable.display tbody tr:hover {
+ background-color:#DDD2B3;
+}
+#card_container {
+}
+#card_table_filter {
+ display:none;
+}
+#controls {
+ height:12vh;
+ margin:0 10px;
+}
+.search-container {
+ width:200px;
+ position:relative;
+}
+.search-container .form-group {
+ margin-bottom:0px;
+}
+.form-control-feedback {
+ line-height:25px;
+ width:25px;
+ height:25px;
+}
+.search-container label {
+ line-height:25px;
+}
+.search-container label,.search-container #search-filter {
+ float:left;
+ margin-right:10px;
+}
+.search-container #search-filter {
+ width:200px;
+ height:25px;
+}
+.btn-group-lg>.btn,.btn-lg {
+ padding:2px 12px;
+ font-size:13px;
+}
+.header .site_name {
+ float:left;
+}
+a.contact {
+ float:right;
+ margin-right:20px;
+ color:white;
+}
+.last_update {
+ margin:0px 10px 10px 10px;
+ ;
+ font-size:10px;
+ color:#666;
+ cursor:default;
+ clear:both;
+}
+.loading {
+ text-align:center;
+ color:#333;
+ font-size:20px;
+ height:75vh;
+ padding-top:50px;
+}
+.sns {
+ clear:both;
+ height:20px;
+ margin-top:10px;
+}
+.sns>div {
+ line-height:20px;
+ float:left;
+ margin-right:5px;
+}
+.rate_container label {
+ float:left;
+ margin-right:5px;
+}
+#ex1,#ex2 {
+ width:80px;
+ height:25px;
+ line-height:25px;
+ padding:3px 12px;
+ float:left;
+}
+#rate span {
+}
+#rate {
+ font-weight:bold;
+ line-height:25px;
+ float:left;
+ margin-right:10px;
+}
+.rating {
+ margin-left:5px;
+ float:left;
+}
+.rate_container {
+ float:left;
+ margin-right:10px;
+}
+table.dataTable.display tbody tr[data-rare='5'] {
+ background-color:#EEE4D3;
+}
+table.dataTable.display tbody tr[data-rare='4'] {
+ background-color:#FFF;
+}
+.desktop .m_label {
+ display:none;
+}
+@media only screen and (max-width: 760px) and (min-width: 280px), (max-width: 760px) and (min-width: 280px) {
+ .mobile {
+  display:block;
+ }
+ #slide-menu a {
+  color:#fff;
+ }
+ #slide-menu {
+  -webkit-transition:all 0.5s ease;
+  -moz-transition:all 0.5s ease;
+  transition:all 0.5s ease;
+  width:100%;
+  position:fixed;
+  opacity:0;
+  top:0;
+  -webkit-transform:translate3d(-100%,0,0);
+  transform:translate3d(-100%,0,0);
+  height:100%;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  background-color:rgba(33,33,33,0.9);
+  z-index:1000;
+  font-style:italic;
+  font-family:'Work Sans',sans-serif;
+  line-height:60px;
+ }
+ #slide-menu.active {
+  display:block;
+  opacity:1;
+  left:0px;
+  -webkit-transform:translate3d(0,0,0);
+  transform:translate3d(0,0,0);
+ }
+ #slide-menu,#slide-menu.active {
+  background-color:rgba(33,33,33,0.9);
+ }
+ .slide-menu-trigger_back {
+  margin-left:20px;
+ }
+ .m_label {
+  font-size:15px;
+  clear:both;
+  color:white;
+  line-height:22px;
+  font-weight:bold;
+ }
+ #controls {
+  height:5vh;
+ }
+ #controls.desktop .filters {
+  display:none;
+ }
+ #controls.mobile {
+  height:auto;
+  margin:0px 18px;
+  color:white;
+  font-style:normal;
+ }
+ .btn-group-lg>.btn,.btn-lg {
+  padding:2px 6px;
+ }
+ .btn-group,.btn-group-vertical {
+  display:block;
+ }
+ .btn-group {
+  margin:10px 0px 48px;
+ }
+ .search-container {
+  margin:0px 0px 46px;
+ }
+ .rate_container label {
+  line-height:25px;
+ }
+}

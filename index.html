@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ONE PIECE サウストデータベース</title>
+<meta name="description" content="ONE PIECE OPTS">
+<meta name="keywords" content="ONE PIECE,ワンピース,ワンピ,サウザンドストーム,サウスト,wiki,キャラクター,シーンカード,必殺技,シーンカードランキング">
+<meta name="msvalidate.01" content="0AA6FE4C7D1743E74B7B4F5151104E7C" />
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<meta property="og:site_name" content="【サウザンドストーム】ONE PIECE カードデータベース">
+<meta property="og:title" content="ONE PIECE サウストデータベース">
+<meta property="og:type" content="article">
+<meta property="og:image" content="http://opts-db.com/images/og.jpg" />
+<meta property="og:description" content="【サウザンドストーム】ONE PIECE カードデータベース">
+<meta property="og:url" content="http://opts-db.com/">
+<meta property="og:site_name" content="サウストデータベース">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.13/fc-3.2.2/fh-3.1.2/r-2.1.0/datatables.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.0/css/bootstrap-slider.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="script/main.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.13/fc-3.2.2/fh-3.1.2/r-2.1.0/datatables.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.lazy/0.6.4/jquery.lazy.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.0/bootstrap-slider.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="script/lib/add-clear-min.js"></script>
+<script src="script/lib/ejs.min.js"></script>
+<script src="script/ga.js"></script>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<!-- <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<script>
+          // (adsbygoogle = window.adsbygoogle || []).push({
+          //   google_ad_client: "ca-pub-4229409138716619",
+          //   enable_page_level_ads: true
+          // });
+        </script>
+<link rel="stylesheet" href="style/main.css">
+<script type="text/javascript" src="data.js"></script> 
+<script>
+            // var rows = [
+
+            // ];
+</script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>
+  // (function (d, s, id) {
+  //               var js, fjs = d.getElementsByTagName(s)[0];
+  //               if (d.getElementById(id))
+  //                   return;
+  //               js = d.createElement(s);
+  //               js.id = id;
+  //               js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.8";
+  //               fjs.parentNode.insertBefore(js, fjs);
+  //           }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<nav id="slide-menu" class="mobile">
+<a href="javascript:" class="slide-menu-trigger_back" data-title="Menu Close"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+<div id="controls" class='mobile'>
+<div class='filters'>
+<div class='m_label'>rare</div>
+<div class="btn-group btn-group-lg btn-show-group" role="group" aria-label="">
+<button class="btn btn-default active btn-show" type="button" data-rare='all' value="all">All</button>
+<button class="btn btn-default btn-show" type="button" data-rare="4" value="4">★4</button>
+<button class="btn btn-default btn-show" type="button" data-rare="5" value="5">★5</button>
+</div>
+<div class='m_label'>Technique/Special Move</div>
+<div class="btn-group btn-group-lg btn-scene-group" role="group" aria-label="">
+<button class="btn btn-default btn-show" type="button" data-scene='all' value="all">All</button>
+<button class="btn btn-default active btn-show" type="button" data-scene="scene" value="scene">Scene card</button>
+<button class="btn btn-default btn-show" type="button" data-scene="skill" value="skill">Technique / Special Move</button>
+</div>
+<div class='m_label'>type</div>
+<div class="btn-group btn-group-lg btn-type-group" role="group" aria-label="">
+<button class="btn btn-default active btn-show" type="button" value="all">all</button>
+<button class="btn btn-default btn-show" type="button" value="Fighter">Fighter</button>
+<button class="btn btn-default btn-show" type="button" value="Warrior">Warrior</button>
+<button class="btn btn-default btn-show" type="button" value="Assassin">Assassin</button>
+<button class="btn btn-default btn-show" type="button" value="Middle Guard">Middle Guard</button>
+<button class="btn btn-default btn-show" type="button" value="Sniper">Sniper</button>
+<button class="btn btn-default btn-show" type="button" value="Support">Support</button>
+</div>
+<div class='m_label'>Characteristic</div>
+<div class="btn-group btn-group-lg btn-attr-group" role="group" aria-label="">
+<button class="btn btn-default active btn-show" type="button" value="all">all</button>
+<button class="btn btn-default btn-show" type="button" value="fire">fire</button>
+<button class="btn btn-default btn-show" type="button" value="water">water</button>
+<button class="btn btn-default btn-show" type="button" value="ice">ice</button>
+<button class="btn btn-default btn-show" type="button" value="thunder">thunder</button>
+<button class="btn btn-default btn-show" type="button" value="wind">wind</button>
+<button class="btn btn-default btn-show" type="button" value="gravity">gravity</button>
+<button class="btn btn-default btn-show" type="button" value="special">special</button>
+<button class="btn btn-default btn-show" type="button" value="batting">batting</button>
+<button class="btn btn-default btn-show" type="button" value="slash">slash</button>
+</div>
+<div class='m_label'>search:</div>
+<div class="search-container">
+<input id="search-filter" type="text" class="form-control" placeholder="keyword" />
+</div>
+<div class='m_label'>Bonus:</div>
+<div class='rating'>
+<div class='rate_container'>
+<label for="ex1">Power Lv: </label>
+<select id="ex1" class="form-control">
+<option value="0" selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50">50</option>
+<option value="51">51</option>
+<option value="52">52</option>
+<option value="53">53</option>
+<option value="54">54</option>
+<option value="55">55</option>
+<option value="56">56</option>
+<option value="57">57</option>
+<option value="58">58</option>
+<option value="59">59</option>
+<option value="60">60</option>
+<option value="61">61</option>
+<option value="62">62</option>
+<option value="63">63</option>
+<option value="64">64</option>
+<option value="65">65</option>
+<option value="66">66</option>
+<option value="67">67</option>
+<option value="68">68</option>
+<option value="69">69</option>
+<option value="70">70</option>
+<option value="71">71</option>
+<option value="72">72</option>
+<option value="73">73</option>
+<option value="74">74</option>
+<option value="75">75</option>
+<option value="76">76</option>
+<option value="77">77</option>
+<option value="78">78</option>
+<option value="79">79</option>
+<option value="80">80</option>
+<option value="81">81</option>
+<option value="82">82</option>
+<option value="83">83</option>
+<option value="84">84</option>
+<option value="85">85</option>
+<option value="86">86</option>
+<option value="87">87</option>
+<option value="88">88</option>
+<option value="89">89</option>
+<option value="90">90</option>
+<option value="91">91</option>
+<option value="92">92</option>
+<option value="93">93</option>
+<option value="94">94</option>
+<option value="95">95</option>
+<option value="96">96</option>
+<option value="97">97</option>
+<option value="98">98</option>
+<option value="99">99</option>
+<option value="100">100</option>
+</select>
+</div>
+<div class='rate_container'>
+<label for="ex2">Type Lv: </label>
+<select id="ex2" class="form-control">
+<option value="0" selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50">50</option>
+<option value="51">51</option>
+<option value="52">52</option>
+<option value="53">53</option>
+<option value="54">54</option>
+<option value="55">55</option>
+<option value="56">56</option>
+<option value="57">57</option>
+<option value="58">58</option>
+<option value="59">59</option>
+<option value="60">60</option>
+<option value="61">61</option>
+<option value="62">62</option>
+<option value="63">63</option>
+<option value="64">64</option>
+<option value="65">65</option>
+<option value="66">66</option>
+<option value="67">67</option>
+<option value="68">68</option>
+<option value="69">69</option>
+<option value="70">70</option>
+<option value="71">71</option>
+<option value="72">72</option>
+<option value="73">73</option>
+<option value="74">74</option>
+<option value="75">75</option>
+<option value="76">76</option>
+<option value="77">77</option>
+<option value="78">78</option>
+<option value="79">79</option>
+<option value="80">80</option>
+<option value="81">81</option>
+<option value="82">82</option>
+<option value="83">83</option>
+<option value="84">84</option>
+<option value="85">85</option>
+<option value="86">86</option>
+<option value="87">87</option>
+<option value="88">88</option>
+<option value="89">89</option>
+<option value="90">90</option>
+<option value="91">91</option>
+<option value="92">92</option>
+<option value="93">93</option>
+ <option value="94">94</option>
+<option value="95">95</option>
+<option value="96">96</option>
+<option value="97">97</option>
+<option value="98">98</option>
+<option value="99">99</option>
+<option value="100">100</option>
+</select>
+</div>
+<div id='rate'>coefficient: <span>1</span></div>
+</div>
+<div style='clear:both;'></div>
+</div>
+</div>
+<ul class="menu">
+
+</ul>
+</nav>
+<div class="container-fluid">
+<div class="header">
+<a href="javascript:" class="btn_menu mobile" data-title="Menu On"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+<div class="site_name">ONE PIECE サウストデータベース</div>
+<a class="contact" href="https://docs.google.com/forms/d/e/1FAIpQLSfsV2JgU7LuwI-1LxfS02R9jQEACmVoXhSRA6TTydGr-KCcBA/viewform" target="_blank">Your opinion</a>
+</div>
+<div id="controls" class='desktop'>
+<div class='filters'>
+<div class='m_label'>rare</div>
+<div class="btn-group btn-group-lg btn-show-group" role="group" aria-label="">
+<button class="btn btn-default active btn-show" type="button" data-rare='all' value="all">All</button>
+<button class="btn btn-default btn-show" type="button" data-rare="4" value="4">★4</button>
+<button class="btn btn-default btn-show" type="button" data-rare="5" value="5">★5</button>
+</div>
+<div class='m_label'>Technique / Special Move</div>
+<div class="btn-group btn-group-lg btn-scene-group" role="group" aria-label="">
+<button class="btn btn-default btn-show" type="button" data-scene='all' value="all">All</button>
+<button class="btn btn-default active btn-show" type="button" data-scene="scene" value="scene">Scene card</button>
+<button class="btn btn-default btn-show" type="button" data-scene="skill" value="skill">Technique/Special Move</button>
+</div>
+<div class='m_label'>type</div>
+<div class="btn-group btn-group-lg btn-type-group" role="group" aria-label="">
+<button class="btn btn-default active btn-show" type="button" value="all">all</button>
+<button class="btn btn-default btn-show" type="button" value="Fighter">Fighter</button>
+<button class="btn btn-default btn-show" type="button" value="Warrior">Warrior </button>
+<button class="btn btn-default btn-show" type="button" value="Assassin">Assassin</button>
+<button class="btn btn-default btn-show" type="button" value="Middle Guard">Middle Guard</button>
+<button class="btn btn-default btn-show" type="button" value="Sniper">Sniper</button>
+<button class="btn btn-default btn-show" type="button" value="Support">Support</button>
+</div>
+<div class='m_label'>identity</div>
+<div class="btn-group btn-group-lg btn-attr-group" role = "group" aria-label = "">
+<button class="btn btn-default active btn-show" type="button" value="all">all</button>
+<button class="btn btn-default btn-show" type="button" value="fire">fire</button>
+<button class="btn btn-default btn-show" type="button" value="water">water</button>
+<button class="btn btn-default btn-show" type="button" value="ice">ice</button>
+<button class="btn btn-default btn-show" type="button" value="thunder">thunder</button>
+<button class="btn btn-default btn-show" type="button" value="wind">wind</button>
+<button class="btn btn-default btn-show" type="button" value="gravity">gravity</button>
+<button class="btn btn-default btn-show" type="button" value="special">special</button>
+<button class="btn btn-default btn-show" type="button" value="batting">blow</button>
+<button class="btn btn-default btn-show" type="button" value="slash">slash</button>
+</div>
+<div class='m_label'>search:</div>
+<div class="search-container">
+<input id="search-filter" type="text" class="form-control" placeholder="keyword" />
+</div>
+<div class='m_label'>Bonus:</div>
+<div class='rating'>
+<div class='rate_container'>
+<label for="ex1">Power Lv: </label>
+<select id="ex1" class="form-control">
+<option value="0" selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50">50</option>
+<option value="51">51</option>
+<option value="52">52</option>
+<option value="53">53</option>
+<option value="54">54</option>
+<option value="55">55</option>
+<option value="56">56</option>
+<option value="57">57</option>
+<option value="58">58</option>
+<option value="59">59</option>
+<option value="60">60</option>
+<option value="61">61</option>
+<option value="62">62</option>
+<option value="63">63</option>
+<option value="64">64</option>
+<option value="65">65</option>
+<option value="66">66</option>
+<option value="67">67</option>
+<option value="68">68</option>
+<option value="69">69</option>
+<option value="70">70</option>
+<option value="71">71</option>
+<option value="72">72</option>
+<option value="73">73</option>
+<option value="74">74</option>
+<option value="75">75</option>
+<option value="76">76</option>
+<option value="77">77</option>
+<option value="78">78</option>
+<option value="79">79</option>
+<option value="80">80</option>
+<option value="81">81</option>
+<option value="82">82</option>
+<option value="83">83</option>
+<option value="84">84</option>
+<option value="85">85</option>
+<option value="86">86</option>
+<option value="87">87</option>
+<option value="88">88</option>
+<option value="89">89</option>
+<option value="90">90</option>
+<option value="91">91</option>
+<option value="92">92</option>
+<option value="93">93</option>
+<option value="94">94</option>
+<option value="95">95</option>
+<option value="96">96</option>
+<option value="97">97</option>
+<option value="98">98</option>
+<option value="99">99</option>
+<option value="100">100</option>
+</select>
+</div>
+<div class='rate_container'>
+<label for="ex2">Type Lv: </label>
+<select id="ex2" class="form-control">
+<option value="0" selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50">50</option>
+<option value="51">51</option>
+<option value="52">52</option>
+<option value="53">53</option>
+<option value="54">54</option>
+<option value="55">55</option>
+<option value="56">56</option>
+<option value="57">57</option>
+<option value="58">58</option>
+<option value="59">59</option>
+<option value="60">60</option>
+<option value="61">61</option>
+<option value="62">62</option>
+<option value="63">63</option>
+<option value="64">64</option>
+<option value="65">65</option>
+<option value="66">66</option>
+<option value="67">67</option>
+<option value="68">68</option>
+<option value="69">69</option>
+<option value="70">70</option>
+<option value="71">71</option>
+<option value="72">72</option>
+<option value="73">73</option>
+<option value="74">74</option>
+<option value="75">75</option>
+<option value="76">76</option>
+<option value="77">77</option>
+<option value="78">78</option>
+<option value="79">79</option>
+<option value="80">80</option>
+<option value="81">81</option>
+<option value="82">82</option>
+<option value="83">83</option>
+<option value="84">84</option>
+<option value="85">85</option>
+<option value="86">86</option>
+<option value="87">87</option>
+<option value="88">88</option>
+<option value="89">89</option>
+<option value="90">90</option>
+<option value="91">91</option>
+<option value="92">92</option>
+<option value="93">93</option>
+<option value="94">94</option>
+<option value="95">95</option>
+<option value="96">96</option>
+<option value="97">97</option>
+<option value="98">98</option>
+<option value="99">99</option>
+<option value="100">100</option>
+</select>
+</div>
+<div id='rate'>coefficient: <span>1</span></div>
+</div>
+<div style='clear:both;'></div>
+</div>
+<div class='sns'>
+<div>
+<a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<div class="fb-like" data-href="http://opts-db.com" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+</div>
+</div>
+<div class='last_update'></div>
+<div class='loading'>
+Loading...
+</div>
+<div id="card_container">
+<table id="card_table" class="display card_table">
+<thead>
+<tr>
+<th>rank</th>
+<th>image</th>
+<th>Rare</th>
+<th>scene card</th>
+<th>Type</th>
+<th>Technique / Special Move</th>
+<th>Character</th>
+<th class="update_datetime"> update_datetime</th>
+<th>Competitive strength</th>
+<th class="gp1_max">HP</th>
+<th class="gp1_max">SP</th>
+<th class="gp1_max">ATK</th>
+<th class="gp1_max">defendant</th>
+<th class="gp1_max">preventable</th>
+<th class="gp1_max">Comprehensive Defense</th>
+<th class="sk">Skills</th>
+<th class="sk">image</th>
+<th class="sk">Attributes</th>
+<th class="sk">Description</th>
+<th class="sk">usable characters</th>
+<th class="sk">State abnormality</th>
+<th class="gp2_max sk">ATK</th>
+<th class="gp2_max sk">CIT</th>
+<th class="gp2_max sk">penetration</th>
+<th class="gp2_max sk">recovery</th>
+<th class="gp2_max sk">SP</th>
+<th class="sk">EX character</th>
+<th class="sk">Automatic technique</th>
+<th class="sk">EX Technique</th>
+<th class="sk">image</th>
+<th class="sk">Attributes</th>
+<th class="sk">Description</th>
+<th class="sk">State abnormality</th>
+<th class="gp3_max sk">ATK</th>
+<th class="gp3_max sk">CIT</th>
+<th class="gp3_max sk">penetration</th>
+<th class="gp3_max sk">recovery</th>
+<th class="gp3_max sk">SP</th>
+<th class="sk">EX Special Moves</th>
+<th class="sk">image</th>
+<th class="sk">Attributes</th>
+<th class="sk">Description</th>
+<th class="sk">State abnormality</th>
+<th class="gp4_max sk">ATK</th>
+<th class="gp4_max sk">CIT</th>
+<th class="gp4_max sk">penetration</th>
+<th class="gp4_max sk">Recovery</th>
+<th class="gp4_max sk">SP</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

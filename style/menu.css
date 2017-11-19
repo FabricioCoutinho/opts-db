@@ -1,0 +1,8 @@
+.btn_menu {
+ float:left;
+ color:white;
+ margin-right:10px;
+}
+.btn_menu:hover {
+ color:white;
+}

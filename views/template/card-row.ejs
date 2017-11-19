@@ -1,0 +1,72 @@
+
+<% for(var i in rows){ var row = rows[i] %>
+<tr data-rare="<%= row['rare'] ? row['rare'] : "-" %>" data-type="<%= row['job'] ? row['job'] : "-" %>" data-scene="<%= row['scene_type'] ? 'skill' : 'scene' %>" data-attr="<%= row['skill_attr'] ? row['skill_attr'] : "-" %><%= row['skill_ex1_attr'] ? row['skill_ex1_attr'] : "-" %><%= row['skill_ex2_attr'] ? row['skill_ex2_attr'] : "-" %>" >
+    <td style="width:58px;"><%= parseInt(i)+1 %></td>
+    <td><img src="<%= row['card_icon'] ? row['card_icon'] : "-" %>" /></td>
+    <td>★<%= row['rare'] ? row['rare'] : "-" %></td>
+    <td>
+        <a target="_blank" href="<%= row['url'] ? row['url'] : "-" %>" data-id="<%= i %>">
+            <%- row['title'] ? row['title'] : "-" %>
+        </a>
+    </td>
+    <td><%- row['job'] ? row['job'] : "-" %></td>
+    <td data-scene="<%= row['scene_type'] ? row['scene_type'] : "-" %>"><%= row['scene_type'] ? row['scene_type'] : "-" %></td>
+    <td class="character"><a href="javascript:" data-toggle="tooltip" data-placement="top" title="捜索"><%= row['character'] ? row['character'] : "-" %></a></td>
+    <td class="update_datetime"><%= row['update_datetime'] ? row['update_datetime'] : "-" %></td>
+    <td class="total_cp" data-order="<%= row['total_cp'] ? row['total_cp'] : "-" %>"><strong><%= row['total_cp'] ? row['total_cp'] : "-" %> <span></span></strong></td>
+    <td class="gp1_max max_hp" data-val="<%= row['max_hp'] ? row['max_hp'] : "-" %>"><%= row['max_hp'] ? row['max_hp'] : "-" %> <span></span></td>
+    <td class="gp1_max max_sp" data-val="<%= row['max_sp'] ? row['max_sp'] : "-" %>"><%= row['max_sp'] ? row['max_sp'] : "-" %> <span></span></td>
+    <td class="gp1_max max_atk" data-val="<%= row['max_atk'] ? row['max_atk'] : "-" %>"><%= row['max_atk'] ? row['max_atk'] : "-" %> <span></span></td>
+    <td class="gp1_max max_def_atk" data-val="<%= row['max_def_atk'] ? row['max_def_atk'] : "-" %>"><%= row['max_def_atk'] ? row['max_def_atk'] : "-" %> <span></span></td>
+    <td class="gp1_max max_def_int" data-val="<%= row['max_def_int'] ? row['max_def_int'] : "-" %>"><%= row['max_def_int'] ? row['max_def_int'] : "-" %> <span></span></td>
+    <td class="gp1_max max_def_int"><%= row['max_def_atk']+row['max_def_int'] %></td>
+    <td class="sk"><%= row['st'] ? row['st'] : "-" %></td>
+    <td class="sk"><% if(row['skill_icon'] != '') { %>
+        <a href="javascript:void();" class="show_btn">見る</a>
+        <img data-src="<%= row['skill_icon'] ? row['skill_icon'] : "-" %>" />
+        <% }else{ %>
+        -
+        <% } %>
+    <td class="sk"><%= row['skill_attr'] ? row['skill_attr'] : "-" %></td>
+    <td class="sk"><%= row['skill_desc'] ? row['skill_desc'] : "-" %></td>
+    <td class="sk"><%= row['skill_character'] ? row['skill_character'] : "-" %></td>
+    <td class="sk"><%= row['skill_effect'] ? row['skill_effect'] : "-" %></td>
+    <td class="gp2_max sk"><%= row['skill_max_atk'] ? row['skill_max_atk'] : "-" %></td>
+    <td class="gp2_max sk"><%= row['skill_max_cit'] ? row['skill_max_cit'] : "-" %></td>
+    <td class="gp2_max sk"><%= row['skill_max_ap'] ? row['skill_max_ap'] : "-" %></td>
+    <td class="gp2_max sk"><%= row['skill_max_heal'] ? row['skill_max_heal'] : "-" %></td>
+    <td class="gp2_max sk"><%= row['skill_max_sp'] ? row['skill_max_sp'] : "-" %></td>
+    <td class="sk"><%= row['skill_ex_character'] ? row['skill_ex_character'] : "-" %></td>
+    <td class="sk"><%= row['seat'] ? row['seat'] : "-" %> <br /> <%= row['skill_ex_auto_desc'] ? row['skill_ex_auto_desc'] : "-" %></td>
+    <td class="sk"><%= row['se1t'] ? row['se1t'] : "-" %></td>
+    <td class="sk"><% if(row['skill_ex1_icon'] != '') { %>
+        <a href="javascript:void();" class="show_btn">見る</a>
+        <img data-src="<%= row['skill_ex1_icon'] ? row['skill_ex1_icon'] : "-" %>" />
+        <% }else{ %>
+        -
+        <% } %></td>
+    <td class="sk"><%= row['skill_ex1_attr'] ? row['skill_ex1_attr'] : "-" %></td>
+    <td class="sk"><%= row['skill_ex1_desc'] ? row['skill_ex1_desc'] : "-" %></td>
+    <td class="sk"><%= row['skill_ex1_effect'] ? row['skill_ex1_effect'] : "-" %></td>
+    <td class="gp3_max sk"><%= row['skill_ex1_max_atk'] ? row['skill_ex1_max_atk'] : "-" %></td>
+    <td class="gp3_max sk"><%= row['skill_ex1_max_cit'] ? row['skill_ex1_max_cit'] : "-" %></td>
+    <td class="gp3_max sk"><%= row['skill_ex1_max_ap'] ? row['skill_ex1_max_ap'] : "-" %></td>
+    <td class="gp3_max sk"><%= row['skill_ex1_max_heal'] ? row['skill_ex1_max_heal'] : "-" %></td>
+    <td class="gp3_max sk"><%= row['skill_ex1_max_sp'] ? row['skill_ex1_max_sp'] : "-" %></td>
+    <td class="sk"><%= row['se2t'] ? row['se2t'] : "-" %></td>
+    <td class="sk"><% if(row['skill_ex2_icon'] != '') { %>
+        <a href="javascript:void();" class="show_btn">見る</a>
+        <img data-src="<%= row['skill_ex2_icon'] ? row['skill_ex2_icon'] : "-" %>" />
+        <% }else{ %>
+        -
+        <% } %></td>
+    <td class="sk"><%= row['skill_ex2_attr'] ? row['skill_ex2_attr'] : "-" %></td>
+    <td class="sk"><%= row['skill_ex2_desc'] ? row['skill_ex2_desc'] : "-" %></td>
+    <td class="sk"><%= row['skill_ex2_effect'] ? row['skill_ex2_effect'] : "-" %></td>
+    <td class="gp4_max sk"><%= row['skill_ex2_max_atk'] ? row['skill_ex2_max_atk'] : "-" %></td>
+    <td class="gp4_max sk"><%= row['skill_ex2_max_cit'] ? row['skill_ex2_max_cit'] : "-" %></td>
+    <td class="gp4_max sk"><%= row['skill_ex2_max_ap'] ? row['skill_ex2_max_ap'] : "-" %></td>
+    <td class="gp4_max sk"><%= row['skill_ex2_max_heal'] ? row['skill_ex2_max_heal'] : "-" %>
+    <td class="gp4_max sk"><%= row['skill_ex2_max_sp'] ? row['skill_ex2_max_sp'] : "-" %></td>
+</tr>
+<% } %>
